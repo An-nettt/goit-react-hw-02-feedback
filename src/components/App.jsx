@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { Section } from './Section';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Statistics } from './Statistics';
+import { Notification } from './Notification';
 
 export default class App extends Component {
   state = {
@@ -55,9 +56,9 @@ export default class App extends Component {
           onClickNeutral={this.handlerClickNeutral}
           onClickBad={this.handlerClickBad}
         />
-
         <Section title="Statistics" />
-        {!visible && 'There is no feedback'}
+        {!visible && <Notification message="There is no feedback" />}
+
         {visible && (
           <Statistics
             good={this.state.good}

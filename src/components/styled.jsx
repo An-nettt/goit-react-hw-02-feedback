@@ -40,6 +40,8 @@ export const Text = styled.p`
   margin-top: 0;
 `;
 
-// export const  = styled.div`
-
-// `;
+export const Message = styled.p`
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 0;
+`;
