@@ -26,6 +26,7 @@ export const Button = styled.button`
   border: 1px solid black;
   border-radius: 5px;
 
+  font-size: 16px;
   font-weight: 700;
 `;
 
@@ -35,12 +36,14 @@ export const StatisticsWrapper = styled.div`
 `;
 
 export const Text = styled.p`
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
   margin-top: 0;
 `;
 
 export const Message = styled.p`
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
   margin-top: 0;
