@@ -1,17 +1,22 @@
-const FeedbackOptions = ({ onClickGood, onClickNeutral, onClickBad }) => {
+import PropTypes from 'prop-types';
+import { FeedbackWrapper, Button } from './styled';
+
+export const FeedbackOptions = ({
+  onClickGood,
+  onClickNeutral,
+  onClickBad,
+}) => {
   return (
-    <div>
-      <button type="button" onClick={onClickGood}>
+    <FeedbackWrapper>
+      <Button type="button" onClick={onClickGood}>
         Good
-      </button>
-      <button type="button" onClick={onClickNeutral}>
+      </Button>
+      <Button type="button" onClick={onClickNeutral}>
         Neutral
-      </button>
-      <button type="button" onClick={onClickBad}>
+      </Button>
+      <Button type="button" onClick={onClickBad}>
         Bad
-      </button>
-    </div>
+      </Button>
+    </FeedbackWrapper>
   );
 };
-
-export default FeedbackOptions;

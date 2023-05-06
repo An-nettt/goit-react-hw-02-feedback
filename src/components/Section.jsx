@@ -1,5 +1,10 @@
-const Section = ({ title }) => {
-  return <h2> {title} </h2>;
+import PropTypes from 'prop-types';
+import { Title } from './styled';
+
+export const Section = ({ title }) => {
+  return <Title> {title} </Title>;
 };
 
-export default Section;
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+};

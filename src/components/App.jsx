@@ -1,7 +1,11 @@
+import PropTypes from 'prop-types';
+import { Wrapper } from './styled';
+
 import { Component } from 'react';
-import Section from './Section';
-import FeedbackOptions from './FeedbackOptions';
-import Statistics from './Statistics';
+import { Section } from './Section';
+import { FeedbackOptions } from './FeedbackOptions';
+import { Statistics } from './Statistics';
+
 export default class App extends Component {
   state = {
     good: 0,
@@ -33,8 +37,6 @@ export default class App extends Component {
     });
   };
 
-  // countPositiveFeedbackPercentage()
-
   render() {
     const countTotalFeedback =
       this.state.good + this.state.neutral + this.state.bad;
@@ -44,7 +46,7 @@ export default class App extends Component {
     );
 
     return (
-      <div>
+      <Wrapper>
         <Section title="Please leave feedback" />
         <FeedbackOptions
           onClickGood={this.handlerClickGood}
@@ -60,7 +62,7 @@ export default class App extends Component {
           total={countTotalFeedback}
           positivePercentage={countPositiveFeedbackPercentage}
         />
-      </div>
+      </Wrapper>
     );
   }
 }
