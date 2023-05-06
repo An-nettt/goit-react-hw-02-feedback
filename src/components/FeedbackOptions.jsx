@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { FeedbackWrapper, Button } from './styled';
 
 export const FeedbackOptions = ({
