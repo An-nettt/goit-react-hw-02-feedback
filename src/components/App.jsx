@@ -13,26 +13,10 @@ export default class App extends Component {
     bad: 0,
   };
 
-  handlerClickGood = () => {
+  handleLeaveFeedback = button => {
     this.setState(prevState => {
       return {
-        good: prevState.good + 1,
-      };
-    });
-  };
-
-  handlerClickNeutral = () => {
-    this.setState(prevState => {
-      return {
-        neutral: prevState.neutral + 1,
-      };
-    });
-  };
-
-  handlerClickBad = () => {
-    this.setState(prevState => {
-      return {
-        bad: prevState.bad + 1,
+        [button.toLowerCase()]: prevState[button.toLowerCase()] + 1,
       };
     });
   };
@@ -52,9 +36,8 @@ export default class App extends Component {
       <Wrapper>
         <Section title="Please leave feedback" />
         <FeedbackOptions
-          onClickGood={this.handlerClickGood}
-          onClickNeutral={this.handlerClickNeutral}
-          onClickBad={this.handlerClickBad}
+          options={['Good', 'Neutral', 'Bad']}
+          onLeaveFeedback={this.handleLeaveFeedback}
         />
         <Section title="Statistics" />
         {!visible && <Notification message="There is no feedback" />}
